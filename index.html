@@ -1,0 +1,265 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="description" content="Personal website of Lawrence Makani, a Mulungushi University student and church musical director learning web development.">
+  <meta name="theme-color" content="#1F3A5F">
+  <title>Lawrence Makani | ICT251 Personal Website</title>
+  <link rel="stylesheet" href="css/styles.css">
+  <script src="js/script.js" defer></script>
+</head>
+<body class="welcome-open">
+
+  <!-- Code for a welcome screen fades in on load, pressing the continue button reveals the website -->
+  <div id="welcome" class="welcome" role="dialog" aria-modal="true" aria-labelledby="welcome-title">
+    <div class="welcome-card">
+      <p class="welcome-kicker">ICT251 Web Technologies</p>
+      <p id="welcome-title" class="welcome-title">Welcome to Lawrence Makani's website</p>
+      <p>Music director, engineering student and web developer in training.</p>
+      <button type="button" id="welcome-continue" class="welcome-button">Continue &rarr;</button>
+    </div>
+  </div>
+  <noscript><style>.welcome { display: none !important; } body.welcome-open { overflow: auto; }</style></noscript>
+
+  <a class="skip-link" href="#main">Skip to main content</a>
+
+  <!-- Decorative background bubbles (hidden from screen readers) -->
+  <div class="bg-bubbles" aria-hidden="true"><span></span><span></span><span></span><span></span><span></span></div>
+
+  <header>
+    <h1>Lawrence Makani</h1>
+    <p class="tagline">Computer Science student &middot; Church musical director &middot; Web dev beginner</p>
+    <div class="header-controls">
+      <button type="button" id="nav-toggle" class="nav-toggle" aria-expanded="false" aria-controls="nav-list">Menu &#9776;</button>
+      <button type="button" id="theme-toggle" class="theme-toggle" aria-pressed="false">Dark mode</button>
+    </div>
+    <nav aria-label="Main navigation">
+      <ul id="nav-list">
+        <li><a href="#about">About Me</a></li>
+        <li><a href="#hobbies">Hobbies</a></li>
+        <li><a href="#learning-plan">Learning Plan</a></li>
+        <li><a href="#projects">Projects</a></li>
+        <li><a href="#photos">My Photos</a></li>
+        <li><a href="#media">My Media</a></li>
+        <li><a href="#contact">Contact</a></li>
+        <li><a href="https://www.w3schools.com/html/default.asp" target="_blank" rel="noopener">W3Schools (external)</a></li>
+      </ul>
+    </nav>
+  </header>
+
+  <main id="main">
+
+    <section id="intro" class="hero">
+      <h2>Hello, I'm Lawrence</h2>
+      <p class="hero-programme">Computer Science &middot; School of Engineering and Technology, Mulungushi University</p>
+      <p>
+        I lead my church's praise team on keyboard and I'm learning to build websites the same way I
+        learn a new song: one small piece at a time. This site is my progress so far.
+      </p>
+      <a class="button" href="#projects">View My Projects</a>
+    </section>
+
+    <section id="about" class="content-section">
+      <h2>About Me</h2>
+      <p>
+        My name is Lawrence, and I'm a student in the School of Engineering and Technology at
+        Mulungushi University. Outside of lecture halls, I serve as the musical director for my
+        church's praise team, where I teach worship songs, plan rehearsals, and play keyboard during
+        services. I enjoy combining a technical mindset with creativity, whether that means recording
+        a click track for my church band or, more recently, writing my very first lines of HTML. Web
+        technologies are new territory for me, but I'm looking forward to building something that
+        reflects who I am and sharing it with the people I study alongside.
+      </p>
+    </section>
+
+    <section id="hobbies" class="content-section">
+      <h2>My Hobbies</h2>
+      <ul>
+        <li>Playing keyboard and producing music</li>
+        <li>Leading and teaching songs to my church's praise team</li>
+        <li>Gaming, especially Mortal Kombat and Call of Duty</li>
+        <li>Going out for Movies</li>
+      </ul>
+
+      <h3>Steps to Improve My Web Skills</h3>
+      <ol>
+        <li>Finish an interactive HTML and CSS course, then rebuild this page from a blank file.</li>
+        <li>Practice responsive layout by redesigning this site for mobile first, then scaling up.</li>
+        <li>Learn basic JavaScript so my contact form can validate input before it is ever connected to a server.</li>
+      </ol>
+    </section>
+
+    <section id="learning-plan" class="content-section">
+      <h2>My Learning Plan</h2>
+      <table>
+        <caption>Weekly Web Development Learning Plan</caption>
+        <thead>
+          <tr>
+            <th scope="col">Day</th>
+            <th scope="col">Topic</th>
+            <th scope="col">Practice Task</th>
+          </tr>
+        </thead>
+        <tbody>
+          <tr>
+            <td>Monday</td>
+            <td>HTML structure &amp; semantics</td>
+            <td>Rebuild this page's sections from scratch</td>
+          </tr>
+          <tr>
+            <td>Wednesday</td>
+            <td>CSS layout &amp; the box model</td>
+            <td>Recreate the photo gallery using CSS Grid</td>
+          </tr>
+          <tr>
+            <td>Friday</td>
+            <td>Responsive design</td>
+            <td>Test the page at three different screen widths</td>
+          </tr>
+          <tr>
+            <td>Saturday</td>
+            <td>Basic JavaScript</td>
+            <td>Add a live character counter to the message box</td>
+          </tr>
+        </tbody>
+      </table>
+
+      <h3>Study Hours Calculator</h3>
+      <p>Plan your week: enter hours per day and days per week to see your total.</p>
+      <form id="hours-form" class="calc-form" novalidate>
+        <div class="form-row">
+          <label for="hours-per-day">Hours per day</label>
+          <input type="text" inputmode="decimal" id="hours-per-day" autocomplete="off">
+        </div>
+        <div class="form-row">
+          <label for="days-per-week">Days per week (1&ndash;7)</label>
+          <input type="text" inputmode="numeric" id="days-per-week" autocomplete="off">
+        </div>
+        <button type="submit">Calculate</button>
+        <p id="hours-result" class="calc-result" role="status"></p>
+      </form>
+    </section>
+
+    <section id="projects" class="content-section">
+      <h2>Projects &amp; Skills</h2>
+      <p>Three things I have built or practised while learning web technologies.</p>
+      <div class="project-grid">
+        <article class="project-card">
+          <h3>This Personal Website</h3>
+          <p class="project-skill">Skill: HTML5 structure</p>
+          <p>Built with header, nav, main, section and footer elements, a captioned photo gallery, a data table and embedded video and audio.</p>
+        </article>
+        <article class="project-card">
+          <h3>Responsive Photo Gallery</h3>
+          <p class="project-skill">Skill: CSS Grid and media queries</p>
+          <p>A gallery that rearranges itself from three columns on a computer to a single column on a phone.</p>
+        </article>
+        <article class="project-card">
+          <h3>Contact Form Validation</h3>
+          <p class="project-skill">Skill: JavaScript events and the DOM</p>
+          <p>A form that checks the name, email and message in the browser and shows a preview without reloading the page.</p>
+        </article>
+      </div>
+    </section>
+
+    <section id="photos" class="content-section">
+      <h2>My Photos</h2>
+      <p>A few snapshots from campus and church life.</p>
+      <div class="gallery">
+        <figure>
+          <img src="images/photo1.jpg" alt="Lawrence smiling and giving two thumbs up in front of a purple jacaranda tree" width="300" height="400" loading="lazy">
+          <figcaption>On My Way Back From Church</figcaption>
+        </figure>
+        <figure>
+          <img src="images/photo2.jpg" alt="Lawrence playing a Yamaha keyboard during a church service" width="300" height="400" loading="lazy">
+          <figcaption>Random Photo At Church</figcaption>
+        </figure>
+        <figure>
+          <img src="images/photo3.jpg" alt="Close-up of a laptop screen showing the HTML code for this website in VS Code" width="300" height="400" loading="lazy">
+          <figcaption>Working on this website in VS Code</figcaption>
+        </figure>
+      </div>
+    </section>
+
+    <section id="media" class="content-section">
+      <h2>My Media</h2>
+
+      <h3>Video Introduction</h3>
+      <video controls width="360" height="640" preload="metadata">
+        <source src="videos/intro.mp4" type="video/mp4">
+        Your browser does not support the video tag.
+      </video>
+      <p class="media-note">
+        <strong>Transcript:</strong> "Hi, my name is Lawrence. I'm studying Computer Science at Mulungushi
+        University, and one web skill I hope to learn this term is building responsive layouts with CSS."
+      </p>
+
+      <h3>Audio Clip</h3>
+      <audio controls>
+        <source src="videos/voice.mp3" type="audio/mpeg">
+        Your browser does not support the audio tag.
+      </audio>
+      <p class="media-note">
+        In this clip I talk about leading music at my church and why that experience made me curious
+        about building things for the web.
+      </p>
+    </section>
+
+    <section id="contact" class="content-section">
+      <h2>Contact</h2>
+      <p class="demo-label"><strong>Browser demonstration only &mdash; no message is sent.</strong></p>
+      <form action="#" id="contact-form" novalidate>
+        <div class="form-row">
+          <label for="name">Name</label>
+          <input type="text" id="name" name="name" autocomplete="name" required aria-describedby="name-error">
+          <span class="error" id="name-error" role="alert"></span>
+        </div>
+
+        <div class="form-row">
+          <label for="email">Email</label>
+          <input type="email" id="email" name="email" autocomplete="email" required aria-describedby="email-error">
+          <span class="error" id="email-error" role="alert"></span>
+        </div>
+
+        <div class="form-row">
+          <label for="topic">Topic</label>
+          <select id="topic" name="topic">
+            <option value="general">General question</option>
+            <option value="music">Church music</option>
+            <option value="web">Web development</option>
+          </select>
+        </div>
+
+        <div class="form-row">
+          <label for="message">Message</label>
+          <textarea id="message" name="message" rows="5" maxlength="300" required aria-describedby="message-error message-count"></textarea>
+          <div class="field-meta">
+            <span class="error" id="message-error" role="alert"></span>
+            <span class="counter" id="message-count" aria-live="polite">0 / 300</span>
+          </div>
+        </div>
+
+        <button type="submit">Send Message</button>
+        <p class="form-status" id="form-status" role="status"></p>
+      </form>
+
+      <div id="preview" class="preview" hidden>
+        <h3>Preview of validated data</h3>
+        <p class="preview-note">Your input passed validation in the browser. It has not been sent or delivered anywhere.</p>
+        <dl>
+          <dt>Name</dt><dd id="preview-name"></dd>
+          <dt>Email</dt><dd id="preview-email"></dd>
+          <dt>Topic</dt><dd id="preview-topic"></dd>
+          <dt>Message</dt><dd id="preview-message"></dd>
+        </dl>
+      </div>
+    </section>
+
+  </main>
+
+  <footer>
+    <p>&copy; 2026 Lawrence Makani. Built for ICT251 Web Technologies, Mulungushi University.</p>
+    <p><a href="https://github.com/YOUR-USERNAME/YOUR-REPO" target="_blank" rel="noopener">View Source on GitHub</a></p>
+  </footer>
+
