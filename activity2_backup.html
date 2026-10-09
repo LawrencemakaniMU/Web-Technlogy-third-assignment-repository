@@ -1,0 +1,176 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>My First Web Page</title>
+  <link rel="stylesheet" href="css/styles.css">
+</head>
+<body>
+
+  <header>
+    <h1>Lawrence Makani</h1>
+    <p class="tagline">Computer Science student &middot; Church musical director &middot; Web dev beginner</p>
+    <nav>
+      <ul>
+        <li><a href="#about">About Me</a></li>
+        <li><a href="#hobbies">Hobbies</a></li>
+        <li><a href="#learning-plan">Learning Plan</a></li>
+        <li><a href="#photos">My Photos</a></li>
+        <li><a href="#media">My Media</a></li>
+        <li><a href="#contact">Contact</a></li>
+        <li><a href="https://www.w3schools.com/html/default.asp" target="_blank" rel="noopener">W3Schools (external)</a></li>
+      </ul>
+    </nav>
+  </header>
+
+  <main>
+
+    <section id="about" class="content-section">
+      <h2>About Me</h2>
+      <p>
+        My name is Lawrence, and I'm a student in the School of Engineering and Technology at
+        Mulungushi University. Outside of lecture halls, I serve as the musical director for my
+        church's praise team, where I teach worship songs, plan rehearsals, and play keyboard during
+        services. I enjoy combining a technical mindset with creativity, whether that means recording
+        a click track for my church band or, more recently, writing my very first lines of HTML. Web
+        technologies are new territory for me, but I'm looking forward to building something that
+        reflects who I am and sharing it with the people I study alongside.
+      </p>
+    </section>
+
+    <section id="hobbies" class="content-section">
+      <h2>My Hobbies</h2>
+      <ul>
+        <li>Playing keyboard and producing music</li>
+        <li>Leading and teaching songs to my church's praise team</li>
+        <li>Gaming, especially Mortal Kombat and Call of Duty</li>
+        <li>Going out for Movies</li>
+      </ul>
+
+      <h3>Steps to Improve My Web Skills</h3>
+      <ol>
+        <li>Finish an interactive HTML and CSS course, then rebuild this page from a blank file.</li>
+        <li>Practice responsive layout by redesigning this site for mobile first, then scaling up.</li>
+        <li>Learn basic JavaScript so my contact form can validate input before it is ever connected to a server.</li>
+      </ol>
+    </section>
+
+    <section id="learning-plan" class="content-section">
+      <h2>My Learning Plan</h2>
+      <table>
+        <caption>Weekly Web Development Learning Plan</caption>
+        <thead>
+          <tr>
+            <th scope="col">Day</th>
+            <th scope="col">Topic</th>
+            <th scope="col">Practice Task</th>
+          </tr>
+        </thead>
+        <tbody>
+          <tr>
+            <td>Monday</td>
+            <td>HTML structure &amp; semantics</td>
+            <td>Rebuild this page's sections from scratch</td>
+          </tr>
+          <tr>
+            <td>Wednesday</td>
+            <td>CSS layout &amp; the box model</td>
+            <td>Recreate the photo gallery using CSS Grid</td>
+          </tr>
+          <tr>
+            <td>Friday</td>
+            <td>Responsive design</td>
+            <td>Test the page at three different screen widths</td>
+          </tr>
+          <tr>
+            <td>Saturday</td>
+            <td>Basic JavaScript</td>
+            <td>Add a live character counter to the message box</td>
+          </tr>
+        </tbody>
+      </table>
+    </section>
+
+    <section id="photos" class="content-section">
+      <h2>My Photos</h2>
+      <p>A few snapshots from campus and church life.</p>
+      <div class="gallery">
+        <figure>
+          <img src="images/photo1.jpg" alt="Lawrence standing outside a lecture hall at Mulungushi University"width="300">
+          <figcaption>On My Way Back From Church</figcaption>
+        </figure>
+        <figure>
+          <img src="images/photo2.jpg" alt="Lawrence playing keyboard during a church rehearsal"width="300">
+          <figcaption>Random Photo At Church</figcaption>
+        </figure>
+        <figure>
+          <img src="images/photo3.jpg" alt="Lawrence's laptop showing code editor with this website open" width="300">
+          <figcaption>Working on this website in VS Code</figcaption>
+        </figure>
+      </div>
+    </section>
+
+    <section id="media" class="content-section">
+      <h2>My Media</h2>
+
+      <h3>Video Introduction</h3>
+      <video controls width="480" poster="videos/intro.mp4">
+        <source src="videos/intro.mp4" type="video/mp4">
+        Your browser does not support the video tag.
+      </video>
+      <p class="media-note">
+        <strong>Transcript:</strong> "Hi, my name is Lawrence. I'm studying Computer Science at Mulungushi
+        University, and one web skill I hope to learn this term is building responsive layouts with CSS."
+      </p>
+
+      <h3>Audio Clip</h3>
+      <audio controls>
+        <source src="videos/voice.mp3" type="audio/mp3">
+        Your browser does not support the audio tag.
+      </audio>
+      <p class="media-note">
+        In this clip I talk about some of my hobbies.
+      </p>
+    </section>
+
+    <section id="contact" class="content-section">
+      <h2>Contact</h2>
+      <p>This form is a browser demonstration only &mdash; it does not send data anywhere.</p>
+      <form action="#">
+        <div class="form-row">
+          <label for="name">Name</label>
+          <input type="text" id="name" name="name" required>
+        </div>
+
+        <div class="form-row">
+          <label for="email">Email</label>
+          <input type="email" id="email" name="email" required>
+        </div>
+
+        <div class="form-row">
+          <label for="topic">Topic</label>
+          <select id="topic" name="topic">
+            <option value="general">General question</option>
+            <option value="music">Church music</option>
+            <option value="web">Web development</option>
+          </select>
+        </div>
+
+        <div class="form-row">
+          <label for="message">Message</label>
+          <textarea id="message" name="message" rows="5" required></textarea>
+        </div>
+
+        <button type="submit">Send Message</button>
+      </form>
+    </section>
+
+  </main>
+
+  <footer>
+    <p>&copy; 2026 Lawrence Makani. Built for ICT251 Web Technologies, Mulungushi University.</p>
+  </footer>
+
+</body>
+</html>
