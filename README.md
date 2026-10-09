@@ -2,7 +2,7 @@
 
 A responsive personal portfolio built with plain HTML5, CSS and JavaScript for ICT251 Web Technologies at Mulungushi University.
 
-**Live site:** https://github.com/LawrencemakaniMU/Web-Technlogy-third-assignment-repository
+**Live site:** https://lawrence-makanis-website.onrender.com/
 
 Sections
 Intro, About Me, My Hobbies, Learning Plan (with study hours calculator), Projects & Skills, My Photos, My Media (video + audio), Contact.
